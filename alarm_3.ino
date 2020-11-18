@@ -1,14 +1,14 @@
 
 #include <SoftwareSerial.h>
-SoftwareSerial mySerial(2,3);
+SoftwareSerial mySerial(2,3); //Rx and Tx to  SIM800
 
 char incomingByte;
 String inputString;
 int led = 10;
 bool active = false;
-int button1 = 8 ;//Button pin, on the other pin it's wired with GND
-int button2 = 9;
-int button3 = 10;
+int button1 = 8 ;// GND from sensor 1
+int button2 = 9;// GND from sensor 2
+int button3 = 10;// GND from sensor 3
 bool button_State; //Button state
 
 void setup()
@@ -57,7 +57,7 @@ void loop()
   Serial.println("Sending SMS...");               //Show this message on serial monitor
   mySerial.print("AT+CMGF=1\r");                   //Set the module to SMS mode
   delay(100);
-  mySerial.print("AT+CMGS=\"+48799722162\"\r");  //Your phone number don't forget to include your country code, example +212123456789"
+  mySerial.print("AT+CMGS=\"+48xxxxxxxxx\"\r");  //Your phone number don't forget to include your country code, example +212123456789"
   delay(500);
   mySerial.print("alarm1");       //This is the text to send to the phone number, don't make it too long or you have to modify the SoftwareSerial buffer
   delay(500);
