@@ -4,11 +4,11 @@ In code not implemented possibilities: deactivate alarm and activate. This funct
 
 To build alarm need:
 
-Arduino
-Sensor/limit switch
-SIM800
-Conecting wire
-Sim cart able to send sms
+*Arduino
+*Sensor/limit switch
+*SIM800
+*Conecting wire
+*Sim cart able to send sms
 
 *******All connection are described in code, read after //
 *******I am available at stanislawskihubert@gmail.com
